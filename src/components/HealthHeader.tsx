@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { HeartPulse, UserPlus } from 'lucide-react';
+import { HeartPulse, UserPlus, LogIn } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
@@ -31,15 +31,26 @@ const HealthHeader = () => {
               <Button variant="outline" size="sm" onClick={handleLogout}>Logout</Button>
             </div>
           ) : (
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="flex items-center gap-1"
-              onClick={() => navigate('/create-account')}
-            >
-              <UserPlus className="h-4 w-4" />
-              Sign Up
-            </Button>
+            <div className="flex items-center space-x-2">
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="flex items-center gap-1"
+                onClick={() => navigate('/login')}
+              >
+                <LogIn className="h-4 w-4" />
+                Login
+              </Button>
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="flex items-center gap-1"
+                onClick={() => navigate('/create-account')}
+              >
+                <UserPlus className="h-4 w-4" />
+                Sign Up
+              </Button>
+            </div>
           )}
         </nav>
       </div>
