@@ -173,7 +173,10 @@ const Results = () => {
         ) : (
           <>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <Card className={`border-l-4 ${getRiskLevel(parseFloat(getAverageRisk('diabetes'))).riskPercentage < 30 ? 'border-l-green-500' : getRiskLevel(parseFloat(getAverageRisk('diabetes'))).riskPercentage < 60 ? 'border-l-yellow-500' : 'border-l-red-500'}`}>
+              <Card className={`border-l-4 ${
+                parseFloat(getAverageRisk('diabetes')) < 30 ? 'border-l-green-500' : 
+                parseFloat(getAverageRisk('diabetes')) < 60 ? 'border-l-yellow-500' : 
+                'border-l-red-500'}`}>
                 <CardHeader className="pb-2">
                   <CardTitle className="text-purple-700 flex items-center gap-2">
                     <Activity className="h-5 w-5" />
@@ -195,7 +198,10 @@ const Results = () => {
                 </CardContent>
               </Card>
               
-              <Card className={`border-l-4 ${getRiskLevel(parseFloat(getAverageRisk('hypertension'))).riskPercentage < 30 ? 'border-l-green-500' : getRiskLevel(parseFloat(getAverageRisk('hypertension'))).riskPercentage < 60 ? 'border-l-yellow-500' : 'border-l-red-500'}`}>
+              <Card className={`border-l-4 ${
+                parseFloat(getAverageRisk('hypertension')) < 30 ? 'border-l-green-500' : 
+                parseFloat(getAverageRisk('hypertension')) < 60 ? 'border-l-yellow-500' : 
+                'border-l-red-500'}`}>
                 <CardHeader className="pb-2">
                   <CardTitle className="text-orange-700 flex items-center gap-2">
                     <Info className="h-5 w-5" />
@@ -217,7 +223,10 @@ const Results = () => {
                 </CardContent>
               </Card>
               
-              <Card className={`border-l-4 ${getRiskLevel(parseFloat(getAverageRisk('heartDisease'))).riskPercentage < 30 ? 'border-l-green-500' : getRiskLevel(parseFloat(getAverageRisk('heartDisease'))).riskPercentage < 60 ? 'border-l-yellow-500' : 'border-l-red-500'}`}>
+              <Card className={`border-l-4 ${
+                parseFloat(getAverageRisk('heartDisease')) < 30 ? 'border-l-green-500' : 
+                parseFloat(getAverageRisk('heartDisease')) < 60 ? 'border-l-yellow-500' : 
+                'border-l-red-500'}`}>
                 <CardHeader className="pb-2">
                   <CardTitle className="text-blue-700 flex items-center gap-2">
                     <HeartPulse className="h-5 w-5" />
