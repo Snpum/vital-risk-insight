@@ -23,7 +23,7 @@ const HealthHeader = () => {
         <nav className="flex items-center">
           <ul className="flex space-x-4 md:space-x-6 mr-4">
             <li><a href="/" className="text-sm text-blue-600 font-medium hover:text-blue-800">Home</a></li>
-            <li><a href="#about" className="text-sm text-gray-600 font-medium hover:text-blue-800">About</a></li>
+            <li><a href="/about" className="text-sm text-gray-600 font-medium hover:text-blue-800">About</a></li>
           </ul>
           {user?.isLoggedIn ? (
             <div className="flex items-center space-x-2">
